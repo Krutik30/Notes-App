@@ -1,0 +1,74 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    margin: 0;
+}
+
+.heading{
+    background: rgb(118, 228, 255);
+    position: sticky;
+    top: 0;
+    padding: 0.5%;
+    padding-left: 5%;
+    z-index: 3;
+}
+
+.flex{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.flex > div{
+    height: 180px;
+    margin: 1%;
+    background: rgb(199, 199, 199);
+    padding: 2%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 1px 2px grey;
+}
+
+.flex > div p{
+    height: 75px;
+    overflow: scroll;
+}
+
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+    .flex { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  /* Screen larger than 900px? 3 columns */
+  @media (min-width: 900px) {
+    .flex { grid-template-columns: repeat(3, 1fr); }
+  }
+
+.footer{
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    z-index: 3;
+    padding: 0.5%;
+    background-color: rgb(252, 252, 252);
+    color: rgb(67, 67, 67);
+}
+
+.new{
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    z-index: 3;
+    width: 5%;
+    height: 10%;
+    border: none;
+    border-radius: 50%;
+    background: rgb(82, 82, 255);
+    color: white;
+    font-size: xx-large;
+    padding-bottom: 1%;
+
+}
