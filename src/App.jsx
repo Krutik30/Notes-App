@@ -4,7 +4,7 @@ import Header from './jsx/Header';
 import CreateNotes from './jsx/MakeNote';
 import Footer from './jsx/Footer';
 import { useState } from 'react';
-import popInput from './jsx/PopInput';
+import PopInput from './jsx/PopInput';
 
 function App() {
 
@@ -13,8 +13,11 @@ function App() {
     title: "",
     content: ""
   });
-
-  
+  const [pop , setPop] = useState(false);
+ 
+  function handlePop(){
+    setPop(!pop);
+  }
 
   return (
     <div>
@@ -23,10 +26,10 @@ function App() {
         {notes.map(CreateNotes)}
       </div>
       <div>
-        <button className='new'>+</button>
-        <popInput
-
-        />
+        <button onClick={handlePop} className='new'>+</button>
+        <PopInput trigger={pop}>
+          
+        </PopInput>
       </div>
       <Footer />
     </div>

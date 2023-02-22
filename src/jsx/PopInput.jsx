@@ -1,13 +1,12 @@
 import React , {useState} from "react";
 
-function popInput(prop){
+function PopInput(prop){
 
-    return (
+    return (prop.trigger) ? ( 
         <div className="pop-box">
-            <input name="title" onChange={handleChange} type="text" value={newNote.title} placeholder="Title"/>
-            <textarea onChange={handleChange} value={newNote.content}></textarea>
+            <button className="btn btn-danger">X</button>
         </div>
-    )
+    ) : "";
 }
 
-export default popInput;
+export default PopInput;

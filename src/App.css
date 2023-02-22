@@ -2,6 +2,13 @@
     display: none;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 body{
     margin: 0;
 }
@@ -62,13 +69,17 @@ body{
     bottom: 10%;
     right: 10%;
     z-index: 3;
-    width: 5%;
-    height: 10%;
+    width: 7%;
+    height: 14%;
     border: none;
     border-radius: 50%;
-    background: rgb(82, 82, 255);
+    background: rgb(91, 91, 255);
     color: white;
     font-size: xx-large;
-    padding-bottom: 1%;
-
+    padding-bottom: 0.5%;
 }
+
+.new:hover{
+    background: rgb(113, 113, 255);
+}
+
