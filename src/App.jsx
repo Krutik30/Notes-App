@@ -47,10 +47,9 @@ function App() {
         }
       </div>
       <div>
-        <button onClick={handlePop} className='new'>+</button>
+        <button onClick={handlePop} className='new'>{pop ? "X" : "+"}</button>
         <PopInput onAdd={addNote} trigger={pop} />
       </div>
-      <Footer />
     </div>
   )
 }

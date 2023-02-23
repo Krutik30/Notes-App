@@ -13,23 +13,28 @@ function PopInput(prop){
 
         const {name , value} = event.target;
         setNewNote((prevItems) => {
-          return {
-              ...prevItems,
-            [name] : value 
-          }
+            return ({
+                ...prevItems,
+                [name] : value
+            })
         });
       }
 
-
       function addNote(event){
-        prop.onAdd(newNote);
+        if(!/^\s*$/.test(newNote.title) && newNote.title !== '')
+            prop.onAdd(newNote);
         event.preventDefault();
+
+        setNewNote({
+            key: "",
+            title: "",
+            content: ""
+        })
       }
 
     return (prop.trigger) ? ( 
         <div className="pop-box">
             <form>
-                <button  className="b1 btn btn-danger">X</button>
                 <input 
                     name="title"
                     className="d-block" 
@@ -46,8 +51,7 @@ function PopInput(prop){
                     value={newNote.content} 
                     placeholder="Take a Note"
                 ></textarea>
-                <button onClick={addNote} className="btn btn-primary">Add</button>
-
+                <button onClick={addNote} className="b1 btn btn-primary">Add</button>
             </form>
         </div>
     ) : "";
