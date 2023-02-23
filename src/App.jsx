@@ -1,7 +1,6 @@
 import './App.css';
 import Header from './jsx/Header';
 import Notes from './jsx/MakeNote';
-import Footer from './jsx/Footer';
 import { useState } from 'react';
 import PopInput from './jsx/PopInput';
 
