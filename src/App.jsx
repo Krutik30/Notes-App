@@ -4,6 +4,17 @@ import Notes from './jsx/MakeNote';
 import { useState } from 'react';
 import PopInput from './jsx/PopInput';
 
+const JSX = {
+  position: "fixed",
+  right: "30%",
+  top: "30%",
+  fontSize: "small",
+  width: "20px",
+  height: "20px",
+  backgroundColor: "red",
+  color: "black"
+}
+
 function App() {
 
   const [pop , setPop] = useState(false);
@@ -46,7 +57,9 @@ function App() {
         }
       </div>
       <div>
-        <button onClick={handlePop} className='new'>{pop ? "X" : "+"}</button>
+        <button
+          style={pop ? JSX : {}}
+          onClick={handlePop} className='new'>{pop ? "X" : "+"}</button>
         <PopInput onAdd={addNote} trigger={pop} />
       </div>
     </div>

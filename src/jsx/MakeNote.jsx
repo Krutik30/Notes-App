@@ -6,14 +6,12 @@ function Notes(props){
 
     return (
       <div className="notebox">
-        <h4>{props.title}</h4>
-        <p>{props.content}</p>
-        <button style={{
-            position: "relative",
-            left: '75%'
-            }} 
+        <p className="index">{props.id + 1}</p>
+        <h2 className="nH">{props.title}</h2>
+        <p className="nP">{props.content}</p>
+        <button
             type="button" 
-            className="b1 btn btn-danger"
+            className="b3 btn btn-danger"
             onClick={handleClick}
         >Delete</button>
       </div>

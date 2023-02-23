@@ -13,12 +13,15 @@ body{
     margin: 0;
 }
 
-.heading{
-    background: rgb(118, 228, 255);
+.heading {
+    background: rgb(195 245 194);
+    color: #434c46;
+    text-align: center;
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Edu NSW ACT Foundation', cursive;
     position: sticky;
     top: 0;
-    padding: 0.5%;
-    padding-left: 5%;
+    padding: .5% .5% .5% 5%;
     z-index: 3;
 }
 
@@ -32,13 +35,14 @@ body{
 .flex > div{
     height: 180px;
     margin: 1%;
-    background: rgb(199, 199, 199);
+    background: rgb(206, 206, 206);
     padding: 2%;
     border-radius: 15px;
-    box-shadow: 2px 2px 1px 2px grey;
+    box-shadow: 2px 2px 8px 2px grey;
+    max-width: 380px;
 }
 
-.flex > div p{
+.flex > div .nP{
     height: 75px;
     overflow: scroll;
 }
@@ -64,7 +68,7 @@ body{
     color: rgb(67, 67, 67);
 }
 
-.new{
+.new {
     position: fixed;
     bottom: 10%;
     right: 10%;
@@ -73,14 +77,33 @@ body{
     height: 14%;
     border: none;
     border-radius: 50%;
-    background: rgb(91, 91, 255);
-    color: white;
+    background: rgb(167 239 166);
+    color: #085706;
     font-size: xx-large;
-    padding-bottom: 0.5%;
+    padding-bottom: .5%;
+}
+
+.b3{
+    position: relative;
+    left: 80%;
+    bottom: 15%;
+}
+
+.nH{
+    padding-left: 2%;
+    font-family: 'Edu NSW ACT Foundation', 'cursive';
+    font-weight: 600;
+}
+
+.nP{
+    padding-left: 4%;
+    font-family: 'Edu NSW ACT Foundation', 'cursive';
+    font-weight: 100;
 }
 
 .new:hover{
     background: rgb(113, 113, 255);
+    color: white;
 }
 
 .pop-box{
@@ -118,4 +141,14 @@ body{
     position: relative;
     left: 38%;
     margin: 3%;
+    background: rgb(167 239 166);
+    color: #085706;
+}
+
+.index{
+    height: 0;
+    position: relative;
+    left: 97%;
+    font-size: xx-small;
+    
 }
