@@ -3,14 +3,15 @@ import Header from './jsx/Header';
 import Notes from './jsx/MakeNote';
 import { useState } from 'react';
 import PopInput from './jsx/PopInput';
+import notesArray from './jsx/notes';
 
 const JSX = {
   position: "fixed",
-  right: "30%",
-  top: "30%",
-  fontSize: "small",
-  width: "20px",
-  height: "20px",
+  right: "30.5%",
+  top: "31%",
+  fontSize: "medium",
+  width: "25px",
+  height: "25px",
   backgroundColor: "red",
   color: "black"
 }
@@ -25,12 +26,14 @@ function App() {
   }
 
   function addNote(newNote){
+    notesArray.push(newNote);
     setNotes(prev => {
       return [...prev,newNote];
     });
   }
 
   function deleteNote(id){
+    notesArray.slice(id,id+1);
     setNotes(prev => {
       return prev.filter((noteI , index) => {
         return index !== id;
