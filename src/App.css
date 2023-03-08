@@ -14,32 +14,32 @@ body{
 }
 
 .heading {
-    background: rgb(195 245 194);
-    color: #434c46;
+    background: #2d71b0ba;
+    color: #f6f2f2;
     text-align: center;
-    font-family: 'Cormorant SC', serif;
-    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-family: Cormorant SC,serif;
+    font-family: Edu NSW ACT Foundation,cursive;
     position: sticky;
     top: 0;
     padding: .5% .5% .5% 5%;
-    z-index: 3;
+    z-index: 3
 }
 
-.flex{
+.flex {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 1rem
 }
 
-.flex > div{
+.flex>div {
     height: 180px;
     margin: 1%;
-    background: rgb(206, 206, 206);
+    background: #4c77986b;
     padding: 2%;
     border-radius: 15px;
     box-shadow: 2px 2px 8px 2px grey;
-    max-width: 380px;
+    max-width: 380px
 }
 
 .flex > div .nP{
@@ -50,22 +50,25 @@ body{
 
 /* Screen larger than 600px? 2 column */
 @media (min-width: 600px) {
-    .flex { grid-template-columns: repeat(2, 1fr); }
-  }
-  
-  /* Screen larger than 900px? 3 columns */
-  @media (min-width: 900px) {
-    .flex { grid-template-columns: repeat(3, 1fr); }
-  }
+    .flex {
+        grid-template-columns:repeat(2,1fr)
+    }
+}
 
-.footer{
+@media (min-width: 900px) {
+    .flex {
+        grid-template-columns:repeat(3,1fr)
+    }
+}
+
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
     z-index: 3;
-    padding: 0.1%;
-    color: rgb(67, 67, 67);
+    padding: .1%;
+    color: #434343
 }
 
 .new {
@@ -77,10 +80,10 @@ body{
     height: 14%;
     border: none;
     border-radius: 50%;
-    background: rgb(167 239 166);
-    color: #085706;
+    background: #2d71b0ba;
+    color: #f8fcf8;
     font-size: xx-large;
-    padding-bottom: .5%;
+    padding-bottom: .5%
 }
 
 .b3{
@@ -101,35 +104,35 @@ body{
     font-weight: 100;
 }
 
-.new:hover{
-    background: rgb(113, 113, 255);
-    color: white;
+.new:hover {
+    background: #2d71b0ba;
+    color: #fff
 }
 
-.pop-box{
+.pop-box {
     position: fixed;
     left: 30%;
     top: 30%;
-    background: #f7fcff;
+    background: #386b9bba;
     text-align: center;
     border: 1px solid grey;
     width: 40%;
     border-radius: 15px;
     box-shadow: 1px 1px 4px 2px #575757;
-    z-index : 2;
+    z-index: 2
 }
 
-.pop-box input , textarea{  
+.pop-box input,textarea {
     font-size: 14px;
     border-radius: 6px;
     padding: 5px 10px;
     border: 2px solid #dee1e2;
-    color: rgb(14, 14, 16);
+    color: #0e0e10;
     background: #d8dbdc;
     display: block;
     width: 90%;
     margin: 3%;
-    height: 36px;
+    height: 36px
 }
 
 .pop-box textarea{
@@ -137,12 +140,12 @@ body{
     height: 100px;
 }
 
-.pop-box .b1{
+.pop-box .b1 {
     position: relative;
     left: 38%;
     margin: 3%;
-    background: rgb(167 239 166);
-    color: #085706;
+    background: rgb(255 255 255);
+    color: #000b29;
 }
 
 .index{
