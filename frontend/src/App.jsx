@@ -4,6 +4,7 @@ import Notes from './jsx/MakeNote';
 import { useState } from 'react';
 import PopInput from './jsx/PopInput';
 import notesArray from './jsx/notes';
+import Login from './jsx/Login';
 
 const JSX = {
   position: "fixed",
@@ -18,6 +19,7 @@ const JSX = {
 
 function App() {
 
+  const [ isLogin, setIsLogin ] = useState(false);
   const [pop , setPop] = useState(false);
   const [notes , setNotes] = useState([]);
 
@@ -44,27 +46,8 @@ function App() {
 
   return (
     <div>
-      <Header />
-      <div className="flex">
-        {
-          notes.map((note,index) => {
-            return(
-              <Notes 
-                key={index}
-                id={index}
-                title={note.title}
-                content = {note.content}
-                onDelete={deleteNote}
-              />)
-          })
-        }
-      </div>
-      <div>
-        <button
-          style={pop ? JSX : {}}
-          onClick={handlePop} className='new'>{pop ? "X" : "+"}</button>
-        <PopInput onAdd={addNote} trigger={pop} />
-      </div>
+      <Login />
+      { isLogin && <Home />}
     </div>
   )
 }
