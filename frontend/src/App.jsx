@@ -5,6 +5,7 @@ import { useState } from 'react';
 import PopInput from './jsx/PopInput';
 import notesArray from './jsx/notes';
 import Login from './jsx/Login';
+import HomePage from './pages/home';
 
 const JSX = {
   position: "fixed",
@@ -46,8 +47,9 @@ function App() {
 
   return (
     <div>
-      <Login />
-      { isLogin && <Home />}
+      {/* <Login /> */}
+      {/* { isLogin && <Home />} */}
+      <HomePage />
     </div>
   )
 }
