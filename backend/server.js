@@ -30,6 +30,13 @@ const NotesSchema = new mongoose.Schema({
 
 })
 
+const KeshaSchema = new mongoose.Schema({
+    love:{
+        type: String,
+    }
+
+})
+
 const Notes = mongoose.model("Notes",NotesSchema);
 
 app.listen(3000, ()=>{
