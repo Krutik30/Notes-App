@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+
 mongoose.connect('mongodb+srv://agherakrutik99:Krutik30@cluster0.raa0ml1.mongodb.net/notes')
 
 const connection = mongoose.connection;
